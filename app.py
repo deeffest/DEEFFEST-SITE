@@ -20,7 +20,7 @@ github_repos = {
     'Youtube Music Desktop Player': {
         'description': 'Makes the Youtube Music site a desktop app.',
         'icon_link': 'static/ytmdp.ico',
-        'version': '1.12.1',
+        'version': '1.13-rc1',
         'github_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player',
         'download_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player/releases'
     },
@@ -34,6 +34,7 @@ github_repos = {
 }
 
 news_list = [
+    {'title': 'Youtube Music Desktop Player 1.13-rc1 update!', 'date': '24.11.2024', 'icon_link': 'static/ytmdp.ico'},
     {'title': 'Qt Multimedia Player is released!', 'date': '09.11.2024', 'icon_link': 'static/qmp.ico'},
     {'title': 'Youtube Music Desktop Player 1.12.1 update!', 'date': '09.11.2024', 'icon_link': 'static/ytmdp.ico'},
     {'title': 'Youtube Music Desktop Player 1.12 update!', 'date': '27.10.2024', 'icon_link': 'static/ytmdp.ico'},
