@@ -43,7 +43,7 @@ body {
     color: white;
     padding: 10px;
     font-size: 16px;
-    background: url('search_white_24dp.svg') no-repeat scroll 12px 7px, rgba(255, 255, 255, 0.1);
+    background: url('../search.svg') no-repeat scroll 12px 7px, rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 30px;
     transition: all 0.1s ease-in-out;
@@ -201,7 +201,7 @@ body {
     width: 100%;
 }
 
-.download-button, .github-button, .info-button {
+.download-button, .github-button, .sourceforge-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,23 +216,23 @@ body {
     text-decoration: none;
 }
 
-.download-button:hover, .github-button:hover, .info-button:hover {
+.download-button:hover, .github-button:hover, .sourceforge-button:hover {
     border-color: DodgerBlue;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-.download-button i, .github-button i, .info-button i {
+.download-button i, .github-button i, .sourceforge-button i {
     font-size: 25px;
 }
 
-.download-button.disabled, .github-button.disabled, .info-button.disabled {
+.download-button.disabled, .github-button.disabled, .sourceforge-button.disabled {
     background-color: rgba(0, 0, 0, 0.3); 
     pointer-events: none; 
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.download-button.disabled i, .github-button.disabled i, .info-button.disabled i {
+.download-button.disabled i, .github-button.disabled i, .sourceforge-button.disabled i {
     color: rgba(255, 255, 255, 0.5);
 }
 

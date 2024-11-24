@@ -7,29 +7,30 @@ github_repos = {
         'description': 'Сross-platform image viewer.',
         'icon_link': 'static/dliv.ico',
         'version': '3.0-beta',
-        'github_link': 'https://github.com/deeffest/DEEF-Lite-Image-Viewer',
-        'download_link': 'https://github.com/deeffest/DEEF-Lite-Image-Viewer/releases'
+        'download_link': 'https://github.com/deeffest/DEEF-Lite-Image-Viewer/releases/',
+        'github_link': 'https://github.com/deeffest/DEEF-Lite-Image-Viewer/'
     },
     'DEEF Lite Media Player': {
         'description': 'Сross-platform media player.',
         'icon_link': 'static/dlmp.ico',
         'version': '2.1.1-beta',
-        'github_link': 'https://github.com/deeffest/DEEF-Lite-Media-Player',
-        'download_link': 'https://github.com/deeffest/DEEF-Lite-Media-Player/releases'
+        'download_link': 'https://github.com/deeffest/DEEF-Lite-Media-Player/releases/',
+        'github_link': 'https://github.com/deeffest/DEEF-Lite-Media-Player/'
     },
     'Youtube Music Desktop Player': {
         'description': 'Makes the Youtube Music site a desktop app.',
         'icon_link': 'static/ytmdp.ico',
         'version': '1.13-rc1',
-        'github_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player',
-        'download_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player/releases'
+        'download_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player/releases/',
+        'github_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player/',
+        'sourceforge_link': 'https://sourceforge.net/projects/youtube-music-desktop-player/'
     },
     'Qt Multimedia Player': {
         'description': "Turns Qt's Media Player Example into a complete application.",
         'icon_link': 'static/qmp.ico',
-        'version': '1.0.0',
-        'github_link': 'https://github.com/deeffest/Qt-Multimedia-Player',
-        'download_link': 'https://github.com/deeffest/Qt-Multimedia-Player/releases'
+        'version': 'v1.0.0',
+        'download_link': 'https://github.com/deeffest/Qt-Multimedia-Player/releases/',
+        'github_link': 'https://github.com/deeffest/Qt-Multimedia-Player/'
     },
 }
 
@@ -82,14 +83,14 @@ news_list = [
     {'title': 'DEEF Lite Image Viewer 1.2 update!', 'date': '09.01.2024', 'icon_link': 'static/dliv.ico'},
     {'title': 'DEEF Lite Image Viewer 1.1 update!', 'date': '29.12.2023', 'icon_link': 'static/dliv.ico'},
     {'title': 'DEEF Lite Image Viewer is released!', 'date': '09.11.2023', 'icon_link': 'static/dliv.ico'},
-    {'title': 'A complete redesign of the site.', 'date': '23.10.2023', 'icon_link': 'static/favicon.ico'}
+    {'title': 'A complete redesign of the site.', 'date': '23.10.2023', 'icon_link': 'static/icon.ico'}
 ]
 
 skills_list = [
     {'title': 'Python', 'icon_link': 'static/python.png'},
-    {'title': 'JavaScript', 'icon_link': 'static/java-script.png'},
+    {'title': 'JavaScript', 'icon_link': 'static/js.png'},
     {'title': 'HTML', 'icon_link': 'static/html.png'},
-    {'title': 'CSS', 'icon_link': 'static/css-3.png'},
+    {'title': 'CSS', 'icon_link': 'static/css.png'},
     {'title': 'Qt', 'icon_link': 'static/qt.png'},
     {'title': 'QML', 'icon_link': 'static/qml.png'},
     {'title': 'Flask', 'icon_link': 'static/flask.png'}
@@ -102,12 +103,14 @@ def home():
         {**info, 'title': title}
         for title, info in github_repos.items()
     ]
-    return render_template('home.html', 
-                           title='deeffest (homepage)', 
-                           background=background, 
-                           projects=projects, 
-                           news_list=news_list, 
-                           skills_list=skills_list)
+    return render_template(
+        'home.html', 
+        title='DEEFFEST-SITE', 
+        background=background, 
+        projects=projects, 
+        news_list=news_list, 
+        skills_list=skills_list
+    )
 
 if __name__ == '__main__':
     app.run(debug=False, port=8088)
