@@ -1,0 +1,7 @@
+v1.0.0 is Here! (30.11.2024)
+- Downloading of pre-releases and beta releases is now unavailable, only the latest stable versions will be on the main page of the site.
+- A small refactoring of the code.
+- Changed the background and avatar.
+- On the home page, the site version is now displayed next to the header.
+- Removed styles for the scrollbar.
+- Other fixes and improvements.

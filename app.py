@@ -6,22 +6,22 @@ github_repos = {
     'DEEF Lite Image Viewer': {
         'description': 'Сross-platform image viewer.',
         'icon_link': 'static/dliv.ico',
-        'version': '3.0-beta',
-        'download_link': 'https://github.com/deeffest/DEEF-Lite-Image-Viewer/releases/',
+        'version': '2.1',
+        'download_link': 'https://github.com/deeffest/DEEF-Lite-Image-Viewer/releases/latest/',
         'github_link': 'https://github.com/deeffest/DEEF-Lite-Image-Viewer/'
     },
     'DEEF Lite Media Player': {
         'description': 'Сross-platform media player.',
         'icon_link': 'static/dlmp.ico',
-        'version': '2.1.1-beta',
-        'download_link': 'https://github.com/deeffest/DEEF-Lite-Media-Player/releases/',
+        'version': '1.2',
+        'download_link': 'https://github.com/deeffest/DEEF-Lite-Media-Player/releases/latest/',
         'github_link': 'https://github.com/deeffest/DEEF-Lite-Media-Player/'
     },
     'Youtube Music Desktop Player': {
         'description': 'Makes the Youtube Music site a desktop app.',
         'icon_link': 'static/ytmdp.ico',
         'version': '1.13',
-        'download_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player/releases/',
+        'download_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player/releases/latest/',
         'github_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player/',
         'sourceforge_link': 'https://sourceforge.net/projects/youtube-music-desktop-player/'
     },
@@ -29,12 +29,13 @@ github_repos = {
         'description': "Turns Qt's Media Player Example into a complete application.",
         'icon_link': 'static/qmp.ico',
         'version': 'v1.0.0',
-        'download_link': 'https://github.com/deeffest/Qt-Multimedia-Player/releases/',
+        'download_link': 'https://github.com/deeffest/Qt-Multimedia-Player/releases/latest/',
         'github_link': 'https://github.com/deeffest/Qt-Multimedia-Player/'
     },
 }
 
 news_list = [
+    {'title': 'DEEFFEST-SITE v1.0.0 is Here!', 'date': '30.11.2024', 'icon_link': 'static/icon.ico'},
     {'title': 'Youtube Music Desktop Player 1.13 update!', 'date': '25.11.2024', 'icon_link': 'static/ytmdp.ico'},
     {'title': 'Youtube Music Desktop Player 1.13-rc1 update!', 'date': '24.11.2024', 'icon_link': 'static/ytmdp.ico'},
     {'title': 'Qt Multimedia Player is released!', 'date': '09.11.2024', 'icon_link': 'static/qmp.ico'},
@@ -99,15 +100,13 @@ skills_list = [
 
 @app.route('/')
 def home():
-    background = 'static/bg.png'
+    template = 'home.html'
     projects = [
         {**info, 'title': title}
         for title, info in github_repos.items()
     ]
     return render_template(
-        'home.html', 
-        title='DEEFFEST-SITE', 
-        background=background, 
+        template,
         projects=projects, 
         news_list=news_list, 
         skills_list=skills_list

@@ -24,18 +24,21 @@ body {
 }
 
 .header-container .title {
-    margin: 0;
     font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-@media only screen and (max-width: 500px) {
-  .header-container .title {
-    display: none;
-  }
+.header-container .version {
+    font-size: 24px;
+    color: gray;
+}
+
+@media only screen and (max-width: 580px) {
+    .header-container .title {
+        display: none;
+    }
+    .header-container .version {
+        display: none;
+    }
 }
 
 .header-container #search {
@@ -43,7 +46,7 @@ body {
     color: white;
     padding: 10px;
     font-size: 16px;
-    background: url('../search.svg') no-repeat scroll 12px 7px, rgba(255, 255, 255, 0.1);
+    background: url('../search.svg') no-repeat 12px 7px, rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 30px;
     transition: all 0.1s ease-in-out;
@@ -253,30 +256,4 @@ footer a, .social a {
 footer a:hover, .social a:hover {
     color: DodgerBlue;
     text-decoration: underline;
-}
-
-::-webkit-scrollbar {
-    width: 10px; 
-    height: 10px; 
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2); 
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.15000)
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: rgba(255, 255, 255, 0.1)
-}
-
-* {
-    scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.2);
-    scrollbar-width: thin;
 }
