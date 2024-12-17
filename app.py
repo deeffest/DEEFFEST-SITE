@@ -20,7 +20,7 @@ github_repos = {
     'Youtube-Music-Desktop-Player': {
         'description': 'Turns the YT Music site into a desktop application. ',
         'icon_link': 'static/ytmdp.ico',
-        'version': 'v1.14.0',
+        'version': 'v1.14.1',
         'download_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player/releases/latest/',
         'github_link': 'https://github.com/deeffest/Youtube-Music-Desktop-Player/',
         'sourceforge_link': 'https://sourceforge.net/projects/youtube-music-desktop-player/'
@@ -35,6 +35,7 @@ github_repos = {
 }
 
 news_list = [
+    {'title': 'Youtube-Music-Desktop-Player v1.14.1 is Here!', 'date': '17.12.2024', 'icon_link': 'static/ytmdp.ico'},
     {'title': 'Youtube-Music-Desktop-Player v1.14.0 is Here!', 'date': '15.12.2024', 'icon_link': 'static/ytmdp.ico'},
     {'title': 'Youtube-Music-Desktop-Player v1.13.1 is Here!', 'date': '11.12.2024', 'icon_link': 'static/ytmdp.ico'},
     {'title': 'DEEFFEST-SITE v1.0.0 is Here!', 'date': '30.11.2024', 'icon_link': 'static/icon.ico'},
