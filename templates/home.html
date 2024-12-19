@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DEEFFEST-SITE</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icon.ico') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="yandex-verification" content="c6cb8a84f147ee4d" />
+    <meta name="google-site-verification" content="fe9W2dl5iljfkPkln9w3-ma9y2VQsbBhTbPcsR4wKoM" />
+    <meta name="description" content="My website.">
+    
+    <style>
+        body, html { 
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .bg::before {
+            content: "";
+            background: url('../static/bg.png');
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_styles.css') }}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="main-container">
+        <header class="header-container">
+            <a href="https://deeffest.pythonanywhere.com">
+                <img src="{{ url_for('static', filename='icon.ico') }}" alt="favicon" width="64" height="64">
+            </a>
+            <h1 class="title">DEEFFEST</h1>
+            <h1 class="version">v1.0.0</h1>
+            <input type="text" id="search" placeholder="Search news & projects">
+        </header>
+        
+        <main>
+            <div class="about-section">
+                <img src="{{ url_for('static', filename='avatar.png') }}" 
+                     style="max-width: 260px; max-height: 260px; border-radius: 50%;" />
+                
+                <h2>deeffest</h2>
+                <p class="subheading">Sergey Bushlanow • Male • 16 yo</p>
+                <p class="description">I love to create.</p>
+                
+                <div class="social">
+                    <a href="https://t.me/deeffest" target="_blank">Telegram: @deeffest</a><br>
+                    <a href="https://github.com/deeffest" target="_blank">Github: @deeffest</a>
+                </div>
+                
+                <div class="section-divider">
+                    <hr class="divider-line">
+                    <span class="divider-text">Skills</span>
+                    <hr class="divider-line">
+                </div>
+                
+                <div id="skills" class="skills-container">
+                    {% for skills in skills_list %}
+                    <div class="skills">
+                        <img src="{{ skills.icon_link }}" style="width: 48px; height: 48px; vertical-align: middle;">
+                        <div class="skills-content">
+                            <div class="skills-title">{{ skills.title }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="section-divider">
+                <hr class="divider-line">
+                <span class="divider-text">News</span>
+                <hr class="divider-line">
+            </div>
+            
+            <div id="news" class="news-container">
+                {% for news in news_list %}
+                <div class="news">
+                    <img src="{{ news.icon_link }}" style="width: 64px; height: 64px; vertical-align: middle;">
+                    <div class="news-content">
+                        <div class="news-title">{{ news.title }}</div>
+                        <div class="news-date">{{ news.date }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="section-divider">
+                <hr class="divider-line">
+                <span class="divider-text">Projects</span>
+                <hr class="divider-line">
+            </div>
+            
+            <div id="projects" class="projects">
+                {% for project in projects %}
+                <div class="project" data-href="{{ project.download_link }}">
+                    <img src="{{ project.icon_link }}" alt="{{ project.title }} Icon" 
+                         style="width: 128px; height: 128px; vertical-align: middle;">
+                         
+                    <div class="project-title" title="{{ project.title }}">{{ project.title }}</div>
+                    
+                    {% if project.version %}
+                    <div class="project-version">{{ project.version }}</div>
+                    {% else %}
+                    <div class="project-version">Coming Soon...</div>
+                    {% endif %}
+                    
+                    <div class="download-overlay">
+                        {% if project.download_link %}
+                        <a href="{{ project.download_link }}" class="download-button">
+                            <i class="fas fa-download"></i>
+                        </a>
+                        {% else %}
+                        <a class="download-button disabled">
+                            <i class="fas fa-download"></i>
+                        </a>
+                        {% endif %}
+                        
+                        {% if project.github_link %}
+                        <a href="{{ project.github_link }}" target="_blank" class="github-button">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        {% else %}
+                        <a class="github-button disabled">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        {% endif %}
+                        
+                        {% if project.sourceforge_link %}
+                        <a href="{{ project.sourceforge_link }}" target="_blank" class="sourceforge-button">
+                            <img src="{{ url_for('static', filename='sourceforge.svg') }}" 
+                                 style="width: 25px; height: 25px;">
+                        </a>
+                        {% else %}
+                        <a class="sourceforge-button disabled">
+                            <img src="{{ url_for('static', filename='sourceforge-disabled.svg') }}" 
+                                 style="width: 25px; height: 25px;">
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="section-divider">
+                <hr class="divider-line">
+                <span class="divider-text">End</span>
+                <hr class="divider-line">
+            </div>
+        </main>
+        
+        <footer>
+            <p>Created with <span>&hearts;</span> by deeffest, 2022-2024</p>
+            <a href="https://github.com/deeffest/DEEFFEST-SITE/issues/new" target="_blank">
+                Did you notice a mistake? Report it!
+            </a>
+        </footer>
+        
+        <script src="{{ url_for('static', filename='js/search_news_and_projects.js') }}"></script>
+    </div>
+</body>
+</html>

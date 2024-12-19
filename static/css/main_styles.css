@@ -1,0 +1,259 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+}
+
+.main-container {
+    max-width: 960px;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.header-container .title {
+    font-size: 24px;
+}
+
+.header-container .version {
+    font-size: 24px;
+    color: gray;
+}
+
+@media only screen and (max-width: 580px) {
+    .header-container .title {
+        display: none;
+    }
+    .header-container .version {
+        display: none;
+    }
+}
+
+.header-container #search {
+    margin-left: auto;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    background: url('../search.svg') no-repeat 12px 7px, rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 30px;
+    transition: all 0.1s ease-in-out;
+    padding-left: 41px; 
+}
+ 
+.header-container #search:hover {
+    box-shadow: 0 0 5px 2px rgba(0, 125, 255, 0.5);
+}
+
+.about-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-section .subheading {
+    color: gray;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.divider-text {
+    padding: 0 10px;
+    color: rgba(255, 255, 255, 0.9); 
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    font-size: 16px; 
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+    background-color: transparent;
+}
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background-color: transparent;
+}
+
+.divider-line {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.5); 
+}
+
+.news-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.news {
+    flex: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.news-title {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.news-text {
+    color: rgba(255, 255, 255, 0.8);
+    white-space: pre-line;
+}
+
+.news-content {
+    margin-left: 10px;
+}
+
+.skills {
+    align-items: center;
+    display: flex;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-title {
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+}
+
+.skills-content {
+    margin-left: 10px;
+    max-width: 200px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    min-width: 170px;
+}
+
+.project img {
+    width: 100px;
+    height: 100px;
+    margin: 3px 0;
+}
+
+.project-title {
+    margin: 3px 0;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    max-width: 175px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.project-version {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 5px 0;
+    max-width: 150px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.download-overlay {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.download-button, .github-button, .sourceforge-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 30px;
+    min-height: 30px;
+    border: 2px solid DeepSkyBlue;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.download-button:hover, .github-button:hover, .sourceforge-button:hover {
+    border-color: DodgerBlue;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.download-button i, .github-button i, .sourceforge-button i {
+    font-size: 25px;
+}
+
+.download-button.disabled, .github-button.disabled, .sourceforge-button.disabled {
+    background-color: rgba(0, 0, 0, 0.3); 
+    pointer-events: none; 
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.download-button.disabled i, .github-button.disabled i, .sourceforge-button.disabled i {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a, .social a {
+    color: DeepSkyBlue;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover, .social a:hover {
+    color: DodgerBlue;
+    text-decoration: underline;
+}
