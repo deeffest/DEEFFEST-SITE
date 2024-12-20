@@ -13,7 +13,7 @@ github_repos = {
     'DEEF Lite Media Player': {
         'description': 'Сross-platform media player.',
         'icon_link': 'static/dlmp.ico',
-        'version': '1.2',
+        'version': 'v2.2.0',
         'download_link': 'https://github.com/deeffest/DEEF-Lite-Media-Player/releases/latest/',
         'github_link': 'https://github.com/deeffest/DEEF-Lite-Media-Player/'
     },
@@ -40,6 +40,7 @@ github_repos = {
 }
 
 news_list = [
+    {'title': 'DEEF Lite Media Player v2.2.0 is Here!', 'date': '21.12.2024', 'icon_link': 'static/dlmp.ico'},
     {'title': 'DEEF Lite Image Viewer v3.1.0 is Here!', 'date': '20.12.2024', 'icon_link': 'static/dliv.ico'},
     {'title': 'DEEFFEST SITE is Here!', 'date': '20.12.2024', 'icon_link': 'static/icon.ico'},
     {'title': 'Youtube Music Desktop Player v1.14.1 is Here!', 'date': '17.12.2024', 'icon_link': 'static/ytmdp.ico'},
