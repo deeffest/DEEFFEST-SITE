@@ -39,10 +39,9 @@
     <div class="main-container">
         <header class="header-container">
             <a href="https://deeffest.pythonanywhere.com">
-                <img src="{{ url_for('static', filename='icon.ico') }}" alt="favicon" width="64" height="64">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="favicon" width="64" height="64">
             </a>
             <h1 class="title">DEEFFEST</h1>
-            <h1 class="version">v1.0.0</h1>
             <input type="text" id="search" placeholder="Search news & projects">
         </header>
         
@@ -52,7 +51,7 @@
                      style="max-width: 260px; max-height: 260px; border-radius: 50%;" />
                 
                 <h2>deeffest</h2>
-                <p class="subheading">Sergey Bushlanow • Male • 16 yo</p>
+                <p class="subheading">aka Sergey Bushlanow</p>
                 <p class="description">I love to create.</p>
                 
                 <div class="social">
@@ -107,13 +106,19 @@
                 <div class="project" data-href="{{ project.download_link }}">
                     <img src="{{ project.icon_link }}" alt="{{ project.title }} Icon" 
                          style="width: 128px; height: 128px; vertical-align: middle;">
-                         
+            
                     <div class="project-title" title="{{ project.title }}">{{ project.title }}</div>
                     
+                    {% if project.description %}
+                    <div class="project-description">
+                        {{ project.description }}
+                    </div>
+                    {% endif %}
+                    
                     {% if project.version %}
-                    <div class="project-version">{{ project.version }}</div>
-                    {% else %}
-                    <div class="project-version">Coming Soon...</div>
+                    <div class="project-version">
+                        {{ project.version }}
+                    </div>
                     {% endif %}
                     
                     <div class="download-overlay">
@@ -151,7 +156,7 @@
                     </div>
                 </div>
                 {% endfor %}
-            </div>
+            </div>            
             
             <div class="section-divider">
                 <hr class="divider-line">
