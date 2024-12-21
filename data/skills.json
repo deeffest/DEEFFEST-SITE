@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Python",
+        "icon_link": "static/python.png"
+    },
+    {
+        "title": "JavaScript",
+        "icon_link": "static/js.png"
+    },
+    {
+        "title": "HTML",
+        "icon_link": "static/html.png"
+    },
+    {
+        "title": "CSS",
+        "icon_link": "static/css.png"
+    },
+    {
+        "title": "Qt",
+        "icon_link": "static/qt.png"
+    },
+    {
+        "title": "QML",
+        "icon_link": "static/qml.png"
+    },
+    {
+        "title": "Flask",
+        "icon_link": "static/flask.png"
+    }
+]

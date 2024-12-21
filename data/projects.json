@@ -1,0 +1,41 @@
+[
+    {
+        "title": "DEEF Lite Image Viewer",
+        "description": "Сross-platform image viewer.",
+        "icon_link": "static/dliv.ico",
+        "version": "v3.1.0",
+        "download_link": "https://github.com/deeffest/DEEF-Lite-Image-Viewer/releases/latest/",
+        "github_link": "https://github.com/deeffest/DEEF-Lite-Image-Viewer/"
+    },
+    {
+        "title": "DEEF Lite Media Player",
+        "description": "Сross-platform media player.",
+        "icon_link": "static/dlmp.ico",
+        "version": "v2.2.0",
+        "download_link": "https://github.com/deeffest/DEEF-Lite-Media-Player/releases/latest/",
+        "github_link": "https://github.com/deeffest/DEEF-Lite-Media-Player/"
+    },
+    {
+        "title": "Youtube Music Desktop Player",
+        "description": "Turns the YT Music site into a desktop application.",
+        "icon_link": "static/ytmdp.ico",
+        "version": "v1.14.1",
+        "download_link": "https://github.com/deeffest/Youtube-Music-Desktop-Player/releases/latest/",
+        "github_link": "https://github.com/deeffest/Youtube-Music-Desktop-Player/",
+        "sourceforge_link": "https://sourceforge.net/projects/youtube-music-desktop-player/"
+    },
+    {
+        "title": "Qt Multimedia Player",
+        "description": "Turns Qt's Media Player Example into a complete application.",
+        "icon_link": "static/qmp.ico",
+        "version": "v1.0.0",
+        "download_link": "https://github.com/deeffest/Qt-Multimedia-Player/releases/latest/",
+        "github_link": "https://github.com/deeffest/Qt-Multimedia-Player/"
+    },
+    {
+        "title": "DEEFFEST SITE",
+        "description": "The source code for my website.",
+        "icon_link": "static/icon.ico",
+        "github_link": "https://github.com/deeffest/DEEFFEST-SITE/"
+    }
+]

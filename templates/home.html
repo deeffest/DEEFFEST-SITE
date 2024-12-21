@@ -66,7 +66,7 @@
                 </div>
                 
                 <div id="skills" class="skills-container">
-                    {% for skills in skills_list %}
+                    {% for skills in skills %}
                     <div class="skills">
                         <img src="{{ skills.icon_link }}" style="width: 48px; height: 48px; vertical-align: middle;">
                         <div class="skills-content">
@@ -84,7 +84,7 @@
             </div>
             
             <div id="news" class="news-container">
-                {% for news in news_list %}
+                {% for news in news %}
                 <div class="news">
                     <img src="{{ news.icon_link }}" style="width: 64px; height: 64px; vertical-align: middle;">
                     <div class="news-content">
@@ -149,14 +149,14 @@
                         </a>
                         {% else %}
                         <a class="sourceforge-button disabled">
-                            <img src="{{ url_for('static', filename='sourceforge-disabled.svg') }}" 
+                            <img src="{{ url_for('static', filename='sourceforge_disabled.svg') }}" 
                                  style="width: 25px; height: 25px;">
                         </a>
                         {% endif %}
                     </div>
                 </div>
                 {% endfor %}
-            </div>            
+            </div>
             
             <div class="section-divider">
                 <hr class="divider-line">
