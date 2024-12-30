@@ -1,5 +1,10 @@
 [
     {
+        "title": "Qt Multimedia Player v1.0.1 is Here!",
+        "date": "31.12.2024",
+        "icon_link": "static/qmp.ico"
+    },
+    {
         "title": "DEEF Lite Media Player v2.2.0 is Here!",
         "date": "21.12.2024",
         "icon_link": "static/dlmp.ico"

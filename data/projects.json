@@ -28,7 +28,7 @@
         "title": "Qt Multimedia Player",
         "description": "Turns Qt's Media Player Example into a complete application.",
         "icon_link": "static/qmp.ico",
-        "version": "v1.0.0",
+        "version": "v1.0.1",
         "download_link": "https://github.com/deeffest/Qt-Multimedia-Player/releases/latest/",
         "github_link": "https://github.com/deeffest/Qt-Multimedia-Player/"
     },
